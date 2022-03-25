@@ -45,7 +45,7 @@ def main():
     socket_address = ('127.0.0.1', 80)
     a = envFind()
     if len(a) == 2:
-        socket_address = a
+        socket_address = (a[0], a[1])
     BUFF_SIZE = 65536
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, BUFF_SIZE)
