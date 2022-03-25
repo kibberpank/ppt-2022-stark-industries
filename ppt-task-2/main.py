@@ -12,7 +12,7 @@ def envFind():
         if key == 'port':
             a.append(int(os.environ[key]))
             print(key)
-        return a
+    return a
 
 
 def main():
@@ -24,7 +24,6 @@ def main():
     timeout = 5
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, BUFF_SIZE)
-    server_socket.bind(socket_address)
     server_socket.sendto(b'INIT_CIRC', socket_address)
     server_socket.settimeout(timeout)
     try:
