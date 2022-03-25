@@ -19,7 +19,7 @@ def main():
     socket_address = ('127.0.0.1', 80)
     a = envFind()
     if len(a) == 2:
-        socket_address = a
+        socket_address = (a[0], a[1])
     BUFF_SIZE = 65536
     timeout = 5
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
